@@ -1,0 +1,86 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form__input {
+    width: 40%;
+    height: 25px;
+    border: 1px solid #b4b4b4;
+    border-radius: 6px;
+    outline: none;
+}
+
+.form__text {
+    margin: 5px 5px 10px 0;
+    font-weight: bold;
+}
+
+.form__block {
+    display: flex;
+    margin: 10px 0 20px;
+}
+
+.form__button-text {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border: 1px solid black;
+    border-radius: 7px;
+    background: #3a5db7;
+    color: white;
+    cursor: pointer;
+}
+
+.form__button-text:hover {
+    background: #28367b;
+}
+
+.form__button-submit {
+    width: 100px;
+    height: 30px;
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+    background: #00ab00;
+    color: white;
+    cursor: pointer;
+}
+
+.form__button-submit:hover {
+    background: darkgreen;
+}
+
+.form__button-remove{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border: 1px solid black;
+    border-radius: 7px;
+    background: #b70b00;
+    color: white;
+    cursor: pointer;
+}
+
+.form__button-remove:hover{
+    background: darkred;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    border-spacing: 3px;
+}
+
+td {
+    border: solid 1px #ccc;
+    padding: 10px;
+}

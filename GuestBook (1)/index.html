@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FirstVue!</title>
+</head>
+<body>
+
+<div id="app">
+    <form v-if="showForm" method="POST" id="form">
+        <p class="form__text">Email</p>
+        <input v-model="email" type="text" name="email" class="form__input">
+
+        <p class="form__text">First Name</p>
+        <input v-model="firstName" type="text" name="name" class="form__input">
+
+        <p class="form__text">Last Name</p>
+        <input v-model="lastName" type="text" name="last_name" class="form__input">
+
+        <p class="form__text">Phone</p>
+        <input v-model="phone" type="text" name="phone" class="form__input">
+
+        <div class="form__block">
+            <p class="form__text">Guests:</p>
+            <button @click.prevent="addGuest" class="form__button-text">+</button>
+        </div>
+        <div v-for = "(guest,index) of guests">
+            <p class="form__text">Guest {{index + 1}}</p>
+            <input v-model="guests[index]" type="text" name="guest" class="form__input">
+            <button @click.prevent="deleteGuest(index)" class="form__button-remove">-</button>
+        </div>
+        <hr>
+        <button @click.prevent="showForm = !showForm" type="submit" class="form__button-submit">Send</button>
+    </form>
+
+    <div v-else="!showForm" id="table">
+        <h1>All is done</h1>
+        <table>
+            <tr>
+                <td>Email</td>
+                <td>{{email}}</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>{{fullName}}</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>{{phone}}</td>
+            </tr>
+            <tr>
+                <td>Guests</td>
+                <td>
+                    <table>
+                        <tr v-for="guest of guests">
+                            <td>{{guest}}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+<script src="js/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
