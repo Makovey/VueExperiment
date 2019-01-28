@@ -1,0 +1,20 @@
+.wrapper{
+	padding: 15px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.pe-7s-check{
+	margin-left: 10px;
+	font-size: 25px;
+	color: green;
+	transition: 1s all;
+}
+
+.pe-7s-close-circle{
+	margin-left: 10px;
+	font-size: 25px;
+	color: red;
+	transition: 1s all;
+
+}
